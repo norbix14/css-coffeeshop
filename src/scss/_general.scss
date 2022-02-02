@@ -1,0 +1,41 @@
+@use 'base/variables' as var;
+
+.container {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.link-active {
+  color: var.$color_secondary !important;
+}
+
+h2 {
+  color: var.$color_primary;
+  span {
+    display: block;
+    font-size: 1.8rem;
+    color: var.$color_secondary;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    background-image: url(../img/svg/cafe.svg);
+    background-size: 10rem;
+    background-repeat: no-repeat;
+  }
+}
+
+.heading-white {
+  @extend h2;
+  color: var.$color_white;
+  span {
+    color: var.$color_white;
+  }
+  &::after {
+    display: none;
+  }
+}

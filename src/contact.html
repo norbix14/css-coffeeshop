@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+    <title>La Cafetería - Contacto</title>
+  </head>
+  <body>
+    <div class="page" id="page">
+      <header class="header header-contact">
+        <div class="header-content container">
+          <div class="navbar-container">
+            <div class="logo">
+              <img loading="lazy" src="./img/svg/logo.svg" alt="logo" />
+            </div>
+            <nav class="main-nav">
+              <a href="./index.html" class="nav-link" id="index">inicio</a>
+              <a href="./aboutus.html" class="nav-link" id="aboutus"
+                >nosotros</a
+              >
+              <a href="./process.html" class="nav-link" id="process">proceso</a>
+              <a href="./menu.html" class="nav-link" id="menu">menú</a>
+              <a href="./gallery.html" class="nav-link" id="gallery">galería</a>
+              <a href="./contact.html" class="nav-link" id="contact"
+                >contacto</a
+              >
+            </nav>
+          </div>
+          <div class="header-text">
+            <h1>mejores granos, mejor café</h1>
+          </div>
+        </div>
+      </header>
+      <main class="main container main-content main-content-page-contact">
+        <h2><span>reserva tu</span>mesa</h2>
+        <div class="contact-content">
+          <form class="contact-form-reservation" id="contactFormReservation">
+            <div class="field">
+              <label for="name">nombre</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nombre"
+                required
+                autofocus
+              />
+            </div>
+            <div class="field">
+              <label for="email">email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="places">cantidad de personas</label>
+              <select name="places" name="places" id="places">
+                <option value="" selected disabled>
+                  -- Seleccionar lugares --
+                </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="more">+ 4</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="hour">hora</label>
+              <input
+                type="time"
+                name="hour"
+                id="hour"
+                min="09:00"
+                max="18:00"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="date">fecha</label>
+              <input type="date" name="date" id="date" required />
+            </div>
+            <div class="field">
+              <button
+                type="submit"
+                class="btn btn-reservation"
+                id="btnReservation"
+              >
+                reservar
+              </button>
+            </div>
+          </form>
+          <div class="contact-form-image-container">
+            <picture>
+              <source srcset="./img/page/granos_cafe.avif" type="image/avif" />
+              <source srcset="./img/page/granos_cafe.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/page/granos_cafe.jpg"
+                class="img"
+                alt="coffee grain"
+                width="500"
+                height="300"
+              />
+            </picture>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container footer-content">
+          <div class="footer-box location">
+            <h3>ubicación</h3>
+            <p>Dirección 123</p>
+            <p>San Genaro, Santa Fe, Argentina</p>
+          </div>
+          <div class="footer-box reservation">
+            <h3>reservación</h3>
+            <p>Tel. 01234 567890</p>
+            <a href="tel:+5401234567890">Llamar</a>
+          </div>
+          <div class="footer-box schedule">
+            <h3>horario</h3>
+            <p>Lunes a Jueves: 11:00 - 22:00</p>
+            <p>Viernes y Sábados: 09:00 - 00:00</p>
+            <p>Domingos: Cerrado</p>
+          </div>
+        </div>
+        <p class="copyright">
+          Todos los derechos reservados. La Cafetería &copy;
+        </p>
+      </footer>
+    </div>
+    <script src="./js/images.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

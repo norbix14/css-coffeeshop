@@ -1,0 +1,25 @@
+@use 'base/variables' as var;
+
+@mixin media-tel() {
+  @media (min-width: var.$media_tel) {
+    @content;
+  }
+}
+
+@mixin media-tablet() {
+  @media (min-width: var.$media_tablet) {
+    @content;
+  }
+}
+
+@mixin media-desktop() {
+  @media (min-width: var.$media_desktop) {
+    @content;
+  }
+}
+
+@mixin media-desktop-xl() {
+  @media (min-width: var.$media_desktop_xl) {
+    @content;
+  }
+}

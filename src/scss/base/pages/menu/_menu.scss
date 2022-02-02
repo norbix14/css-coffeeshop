@@ -1,0 +1,32 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.main-content-page-menu {
+  padding-bottom: 0;
+  h2 {
+    margin: 0;
+  }
+  .menu-content {
+    @include mx.media-tablet {
+      @include mx.grid(2, 2rem);
+      align-items: flex-end;
+    }
+    .text {
+      p {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+      @include mx.media-tablet {
+        margin-bottom: 4rem;
+      }
+      @include mx.media-desktop {
+        margin-bottom: 8rem;
+      }
+    }
+    .menu-image-container {
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}

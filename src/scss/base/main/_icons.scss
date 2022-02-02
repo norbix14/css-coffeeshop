@@ -1,0 +1,22 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.icons {
+  margin-top: 5rem;
+  .icons-list {
+    li {
+      img {
+        margin: 0 auto;
+        width: 12rem;
+      }
+      p {
+        font-size: 3.2rem;
+        font-family: var.$font_cursive;
+        color: var.$color_primary;
+      }
+    }
+    @include mx.media-tablet {
+      @include mx.grid(3, 2rem);
+    }
+  }
+}

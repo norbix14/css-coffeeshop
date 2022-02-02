@@ -1,0 +1,118 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.header {
+  padding: 5rem 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-color: var.$color_primary;
+  .header-content {
+    position: relative;
+    .header-text h1 {
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 5rem;
+      color: var.$color_white;
+      @include mx.media-tablet {
+        margin-top: 10rem;
+      }
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    background-color: var.$color_black;
+  }
+  @include mx.media-tel {
+    padding: 4rem;
+  }
+  @include mx.media-tablet {
+    padding: 3rem;
+    min-height: 70rem;
+  }
+  @include mx.media-desktop {
+    padding: 2rem;
+  }
+  @include mx.media-desktop-xl {
+    background-size: cover;
+  }
+}
+
+.notavif.notwebp .header-home {
+  background-image: url(../img/page/header_inicio.jpg);
+}
+
+.notavif.notwebp .header-about-us {
+  background-image: url(../img/page/header_nosotros.jpg);
+}
+
+.notavif.notwebp .header-process {
+  background-image: url(../img/page/header_procesojpg);
+}
+
+.notavif.notwebp .header-menu {
+  background-image: url(../img/page/header_menu.jpg);
+}
+
+.notavif.notwebp .header-gallery {
+  background-image: url(../img/page/header_galeria.jpg);
+}
+
+.notavif.notwebp .header-contact {
+  background-image: url(../img/page/header_contacto.jpg);
+}
+
+
+.webp .header-home {
+  background-image: url(../img/page/header_inicio.webp);
+}
+
+.webp .header-about-us {
+  background-image: url(../img/page/header_nosotros.webp);
+}
+
+.webp .header-process {
+  background-image: url(../img/page/header_proceso.webp);
+}
+
+.webp .header-menu {
+  background-image: url(../img/page/header_menu.webp);
+}
+
+.webp .header-gallery {
+  background-image: url(../img/page/header_galeria.webp);
+}
+
+.webp .header-contact {
+  background-image: url(../img/page/header_contacto.webp);
+}
+
+
+.avif .header-home {
+  background-image: url(../img/page/header_inicio.avif);
+}
+
+.avif .header-about-us {
+  background-image: url(../img/page/header_nosotros.avif);
+}
+
+.avif .header-process {
+  background-image: url(../img/page/header_proceso.avif);
+}
+
+.avif .header-menu {
+  background-image: url(../img/page/header_menu.avif);
+}
+
+.avif .header-gallery {
+  background-image: url(../img/page/header_galeria.avif);
+}
+
+.avif .header-contact {
+  background-image: url(../img/page/header_contacto.avif);
+}

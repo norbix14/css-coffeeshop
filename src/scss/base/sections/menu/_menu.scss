@@ -1,0 +1,52 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.our-menu {
+  padding: 15rem 5rem 10rem 5rem;
+  background-image: url(../img/svg/menu_arriba.svg),
+    url(../img/svg/menu_abajo.svg),
+    linear-gradient(to top, var.$color_primary, var.$color_primary);
+  background-repeat: no-repeat;
+  background-position: center 2rem, center 100%, 100%;
+  background-size: 200%;
+  @include mx.media-tablet {
+    background-size: 100%;
+    padding: 15rem 0 10rem 0;
+    background-size: 100%;
+    background-position: center 2rem, center 92%, 100%;
+  }
+  @include mx.media-desktop {
+    background-size: 50%, 50%, 100%;
+  }
+}
+
+.menu-grid {
+  @include mx.media-tablet {
+    @include mx.grid(2, 2rem);
+  }
+}
+
+.menu {
+  h3 {
+    color: var.$color_white;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    p {
+      font-size: 2.2rem;
+      line-height: 1.5;
+      color: var.$color_white;
+      span {
+        display: block;
+        color: var.$color_secondary;
+      }
+    }
+    .item-price {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+  }
+}

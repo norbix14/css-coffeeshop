@@ -1,0 +1,63 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+$borderInput: 3px;
+
+.contact-content {
+  @include mx.media-tablet {
+    @include mx.grid(2, 5rem);
+    align-items: center;
+  }
+}
+
+.contact-form-reservation {
+  .field {
+    margin-bottom: 2rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    label {
+      text-transform: uppercase;
+      display: block;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+    input,
+    select {
+      padding: 1rem;
+      width: 100%;
+      background-color: var.$color_white;
+      border: $borderInput solid var.$color_primary;
+      &:focus-visible {
+        outline: none;
+        border: $borderInput solid var.$color_secondary;
+      }
+    }
+    .btn-reservation {
+      all: unset;
+      cursor: pointer;
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+      padding: 1rem 0;
+      transition: all 0.2s ease;
+      font-size: 2.2rem;
+      font-weight: 700;
+      background-color: var.$color_primary;
+      color: var.$color_white;
+      &:hover {
+        background-color: var.$color_secondary;
+      }
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.contact-form-image-container {
+  display: none;
+  @include mx.media-tablet {
+    display: block;
+  }
+}
